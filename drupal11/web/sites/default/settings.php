@@ -723,7 +723,7 @@ $settings['update_free_access'] = FALSE;
  *
  * @see https://www.drupal.org/node/3537128
  */
-# $settings['enable_html5_validation'] = TRUE;
+$settings['enable_html5_validation'] = false;
 
 /**
  * Load services definition file.
@@ -777,7 +777,9 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
  *
  * @see https://www.drupal.org/docs/installing-drupal/trusted-host-settings
  */
-# $settings['trusted_host_patterns'] = [];
+$settings['trusted_host_patterns'] = [
+  '^localhost$',
+];
 
 /**
  * The default list of directories that will be ignored by Drupal's file API.

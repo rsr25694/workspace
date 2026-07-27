@@ -1,0 +1,9 @@
+toolbar:
+  css:
+    theme:
+      css/d8_toolbar.css: {}
+  js:
+    js/d8_toolbar.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

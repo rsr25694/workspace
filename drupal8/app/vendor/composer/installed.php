@@ -1,8 +1,8 @@
 <?php return array(
     'root' => array(
         'name' => 'drupal/recommended-project',
-        'pretty_version' => '8.9.20',
-        'version' => '8.9.20.0',
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
         'reference' => null,
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
@@ -96,6 +96,15 @@
             'replaced' => array(
                 0 => '8.9.20',
             ),
+        ),
+        'drupal/admin_toolbar' => array(
+            'pretty_version' => '3.2.1',
+            'version' => '3.2.1.0',
+            'reference' => '3.2.1',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/admin_toolbar',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'drupal/aggregator' => array(
             'dev_requirement' => false,
@@ -650,8 +659,8 @@
             ),
         ),
         'drupal/recommended-project' => array(
-            'pretty_version' => '8.9.20',
-            'version' => '8.9.20.0',
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
             'reference' => null,
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',

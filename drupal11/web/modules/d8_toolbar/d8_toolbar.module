@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Drupal 8 style toolbar.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_page_attachments().
+ */
+function d8_toolbar_page_attachments(array &$attachments) {
+
+  if (\Drupal::currentUser()->hasPermission('access toolbar')) {
+
+    $attachments['#attached']['library'][] = 'd8_toolbar/toolbar';
+
+  }
+
+}
