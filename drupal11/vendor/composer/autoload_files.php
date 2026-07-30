@@ -29,6 +29,7 @@ return array(
     '1052008401d4a2a5be02f7b4e274d051' => $vendorDir . '/twig/html-extra/Resources/functions.php',
     '2f69d3914119f042cca9e44442d5ce95' => $baseDir . '/web/core/includes/bootstrap.inc',
     '23c18046f52bef3eea034657bafda50f' => $vendorDir . '/symfony/polyfill-php81/bootstrap.php',
+    'ace6d88241f812b4accb2d847454aef6' => $vendorDir . '/halaxa/json-machine/src/functions.php',
     '47e1160838b5e5a10346ac4084b58c23' => $vendorDir . '/laravel/prompts/src/helpers.php',
     'b067bc7112e384b61c701452d53a14a8' => $vendorDir . '/mtdowling/jmespath.php/src/JmesPath.php',
     '801c31d8ed748cfa537fa45402288c95' => $vendorDir . '/psy/psysh/src/functions.php',

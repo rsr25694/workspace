@@ -1,0 +1,79 @@
+<?php
+
+/**
+ * @file
+ * Provides automated subqueues for each entity of a given entity type.
+ */
+
+declare(strict_types=1);
+
+use Drupal\Core\Cache\CacheableMetadata;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Hook\Attribute\LegacyHook;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\entityqueue_smartqueue\Hook\EntityqueueSmartqueueHooks;
+
+/**
+ * Implements hook_help().
+ */
+#[LegacyHook]
+function entityqueue_smartqueue_help($route_name, RouteMatchInterface $route_match) {
+  return \Drupal::service(EntityqueueSmartqueueHooks::class)->help($route_name, $route_match);
+}
+
+/**
+ * Implements hook_entity_field_storage_info().
+ */
+#[LegacyHook]
+function entityqueue_smartqueue_entity_field_storage_info(EntityTypeInterface $entity_type) {
+  return \Drupal::service(EntityqueueSmartqueueHooks::class)->entityFieldStorageInfo($entity_type);
+}
+
+/**
+ * Implements hook_entity_bundle_field_info().
+ */
+#[LegacyHook]
+function entityqueue_smartqueue_entity_bundle_field_info(EntityTypeInterface $entity_type, $bundle, array $base_field_definitions) {
+  return \Drupal::service(EntityqueueSmartqueueHooks::class)->entityBundleFieldInfo($entity_type, $bundle, $base_field_definitions);
+}
+
+/**
+ * Implements hook_entity_insert().
+ */
+#[LegacyHook]
+function entityqueue_smartqueue_entity_insert(EntityInterface $entity) {
+  \Drupal::service(EntityqueueSmartqueueHooks::class)->entityInsert($entity);
+}
+
+/**
+ * Implements hook_entity_update().
+ */
+#[LegacyHook]
+function entityqueue_smartqueue_entity_update(EntityInterface $entity) {
+  \Drupal::service(EntityqueueSmartqueueHooks::class)->entityUpdate($entity);
+}
+
+/**
+ * Implements hook_entity_delete().
+ */
+#[LegacyHook]
+function entityqueue_smartqueue_entity_delete(EntityInterface $entity) {
+  \Drupal::service(EntityqueueSmartqueueHooks::class)->entityDelete($entity);
+}
+
+/**
+ * Implements hook_views_data_alter().
+ */
+#[LegacyHook]
+function entityqueue_smartqueue_views_data_alter(array &$data) {
+  \Drupal::service(EntityqueueSmartqueueHooks::class)->viewsDataAlter($data);
+}
+
+/**
+ * Implements hook_entity_operation().
+ */
+#[LegacyHook]
+function entityqueue_smartqueue_entity_operation(EntityInterface $entity, ?CacheableMetadata $cacheability = NULL) {
+  return \Drupal::service(EntityqueueSmartqueueHooks::class)->entityOperation($entity, $cacheability);
+}

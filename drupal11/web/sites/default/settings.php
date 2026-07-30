@@ -918,3 +918,12 @@ $databases['default']['default'] = array (
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
 $settings['config_sync_directory'] = 'sites/default/files/config_p2YieWp9U6zl47-R4ov1-acOrL8oK9FKzNUmvKXnPvbs-MY1eqnAjuFibj1TZBkx9Kos22H6tQ/sync';
+
+// Redis configuration.
+$settings['redis.connection']['interface'] = 'PhpRedis';
+$settings['redis.connection']['host'] = '127.0.0.1';
+$settings['redis.connection']['port'] = 6379;
+
+$settings['cache']['default'] = 'cache.backend.redis';
+
+$settings['container_yamls'][] = DRUPAL_ROOT . '/modules/contrib/redis/example.services.yml';
