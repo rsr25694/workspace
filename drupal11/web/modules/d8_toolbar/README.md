@@ -1,1 +1,0 @@
-Copy to web/modules/custom, enable with drush en d8_toolbar -y and drush cr.

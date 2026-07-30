@@ -1,5 +1,0 @@
-name: Drupal 8 Style Toolbar
-type: module
-description: Makes Drupal 11 Admin Toolbar look like Drupal 8.
-core_version_requirement: ^11
-package: Custom
