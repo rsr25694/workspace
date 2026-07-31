@@ -1,9 +1,0 @@
-import { jsx as _jsx } from "react/jsx-runtime";
-// See https://project.pages.drupalcode.org/canvas/ for documentation on how to build a code component
-const Component = ({ text = "d" })=>{
-    return /*#__PURE__*/ _jsx("div", {
-        className: "text-3xl",
-        children: text
-    });
-};
-export default Component;

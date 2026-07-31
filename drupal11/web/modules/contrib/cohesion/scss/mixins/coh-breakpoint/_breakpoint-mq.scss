@@ -1,5 +1,0 @@
-@mixin breakpoint-mq($breakpoint) {
-    @media ($breakpoint) {
-        @content
-    }
-}

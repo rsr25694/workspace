@@ -1,8 +1,0 @@
-<?php
-
-/**
- * @file
- * Test hooks for Search API Solr.
- */
-
-declare(strict_types=1);
