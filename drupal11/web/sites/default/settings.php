@@ -286,7 +286,7 @@ $databases = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'tAibbFZyPwTS9kgg2bIMl8s621GDGVq6WfkFw4EdHlKwQ8nDztIzYV3eKd8aecOOTf0mpNv5xA';
+$settings['hash_salt'] = 'goSVaLaWw0x43srRbL_Yd_1Nq1cgkClTk9lC9btW_zvbQJXL89IGunw1-9ABXdGBURkhhQJm2A';
 
 /**
  * Deployment identifier.
@@ -723,7 +723,7 @@ $settings['update_free_access'] = FALSE;
  *
  * @see https://www.drupal.org/node/3537128
  */
-$settings['enable_html5_validation'] = false;
+# $settings['enable_html5_validation'] = TRUE;
 
 /**
  * Load services definition file.
@@ -777,9 +777,7 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
  *
  * @see https://www.drupal.org/docs/installing-drupal/trusted-host-settings
  */
-$settings['trusted_host_patterns'] = [
-  '^localhost$',
-];
+# $settings['trusted_host_patterns'] = [];
 
 /**
  * The default list of directories that will be ignored by Drupal's file API.
@@ -917,13 +915,4 @@ $databases['default']['default'] = array (
   'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
-$settings['config_sync_directory'] = 'sites/default/files/config_p2YieWp9U6zl47-R4ov1-acOrL8oK9FKzNUmvKXnPvbs-MY1eqnAjuFibj1TZBkx9Kos22H6tQ/sync';
-
-// Redis configuration.
-$settings['redis.connection']['interface'] = 'PhpRedis';
-$settings['redis.connection']['host'] = '127.0.0.1';
-$settings['redis.connection']['port'] = 6379;
-
-$settings['cache']['default'] = 'cache.backend.redis';
-
-$settings['container_yamls'][] = DRUPAL_ROOT . '/modules/contrib/redis/example.services.yml';
+$settings['config_sync_directory'] = 'sites/default/files/config_Uu52CFF5k0bGkLXGOzZOXWJZmS0_8k4vu9xfZcceYQoLEmhbDMXJybzHJp7YAD2cq6IEPf6saA/sync';
