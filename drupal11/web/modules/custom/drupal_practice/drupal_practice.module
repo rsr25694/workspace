@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function drupal_practice_theme(): array {
+  return [
+    'practice_dashboard' => [
+      'variables' => [
+        'statistics' => [],
+      ],
+      'template' => 'practice-dashboard',
+    ],
+  ];
+}

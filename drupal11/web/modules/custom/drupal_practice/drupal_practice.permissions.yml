@@ -1,0 +1,16 @@
+administer practice:
+  title: 'Administer practice'
+  description: 'Administer the Practice module.'
+  restrict access: true
+
+view practice dashboard:
+  title: 'View practice dashboard'
+  description: 'View the Practice dashboard.'
+
+create practice tasks:
+  title: 'Create practice tasks'
+  description: 'Create Practice tasks.'
+
+manage own practice tasks:
+  title: 'Manage own practice tasks'
+  description: 'Edit and delete Practice tasks owned by the current user.'

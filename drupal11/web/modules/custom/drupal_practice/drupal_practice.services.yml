@@ -1,0 +1,3 @@
+services:
+  drupal_practice.manager:
+    class: Drupal\drupal_practice\Service\PracticeManager

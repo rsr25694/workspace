@@ -1,0 +1,7 @@
+drupal_practice.dashboard:
+  path: '/practice/dashboard'
+  defaults:
+    _controller: '\Drupal\drupal_practice\Controller\PracticeController::dashboard'
+    _title: 'Practice Dashboard'
+  requirements:
+    _permission: 'view practice dashboard'

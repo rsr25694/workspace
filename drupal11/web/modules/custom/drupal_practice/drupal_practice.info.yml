@@ -1,0 +1,5 @@
+name: Drupal Practice
+type: module
+description: 'Practice module for learning Drupal development.'
+package: Custom
+core_version_requirement: ^10 || ^11
