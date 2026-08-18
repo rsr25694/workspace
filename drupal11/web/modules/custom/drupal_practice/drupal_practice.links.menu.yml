@@ -11,3 +11,10 @@ drupal_practice.tasks:
   route_name: entity.practice_task.collection
   parent: system.admin_content
   weight: 50
+
+drupal_practice.practice_workflows:
+  title: 'Practice Workflows'
+  description: 'Manage practice workflow configuration.'
+  route_name: entity.practice_workflow.collection
+  parent: system.admin_config
+  weight: 20
