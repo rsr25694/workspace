@@ -723,7 +723,7 @@ $settings['update_free_access'] = FALSE;
  *
  * @see https://www.drupal.org/node/3537128
  */
-# $settings['enable_html5_validation'] = TRUE;
+$settings['enable_html5_validation'] = false;
 
 /**
  * Load services definition file.
@@ -916,3 +916,7 @@ $databases['default']['default'] = array (
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
 $settings['config_sync_directory'] = 'sites/default/files/config_Uu52CFF5k0bGkLXGOzZOXWJZmS0_8k4vu9xfZcceYQoLEmhbDMXJybzHJp7YAD2cq6IEPf6saA/sync';
+
+$settings['trusted_host_patterns'] = [
+  '^localhost$',
+];
