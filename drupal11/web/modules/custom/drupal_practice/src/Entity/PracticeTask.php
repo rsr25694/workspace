@@ -78,6 +78,7 @@ class PracticeTask extends ContentEntityBase {
       ->setSettings([
         'max_length' => 255,
       ])
+      ->addConstraint('PracticeTaskTitle')
       ->setDisplayOptions('view', [
         'label' => 'above',
         'type' => 'string',
