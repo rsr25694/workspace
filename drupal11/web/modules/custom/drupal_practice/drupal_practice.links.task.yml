@@ -1,0 +1,5 @@
+drupal_practice.tasks:
+  title: 'Practice Tasks'
+  route_name: entity.practice_task.collection
+  base_route: system.admin_content
+  weight: 50

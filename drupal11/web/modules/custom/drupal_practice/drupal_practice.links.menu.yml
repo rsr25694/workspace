@@ -5,13 +5,6 @@ drupal_practice.dashboard:
   parent: system.admin_content
   weight: 50
 
-drupal_practice.tasks:
-  title: 'Practice Tasks'
-  description: 'Manage practice tasks.'
-  route_name: entity.practice_task.collection
-  parent: system.admin_content
-  weight: 50
-
 drupal_practice.practice_workflows:
   title: 'Practice Workflows'
   description: 'Manage practice workflow configuration.'

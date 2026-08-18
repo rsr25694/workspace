@@ -3,3 +3,9 @@ entity.practice_workflow.add_form:
   title: 'Add workflow'
   appears_on:
     - entity.practice_workflow.collection
+
+entity.practice_task.add_form:
+  route_name: entity.practice_task.add_form
+  title: 'Add Practice Task'
+  appears_on:
+    - entity.practice_task.collection
