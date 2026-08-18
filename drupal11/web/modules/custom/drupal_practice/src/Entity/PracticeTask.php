@@ -6,9 +6,6 @@ use Drupal\Core\Entity\ContentEntityBase;
 use Drupal\Core\Entity\EntityChangedTrait;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
-use Drupal\drupal_practice\Access\PracticeTaskAccessControlHandler;
-use Drupal\drupal_practice\Form\PracticeTaskForm;
-use Drupal\drupal_practice\PracticeTaskListBuilder;
 
 /**
  * Defines the Practice Task entity.
@@ -29,7 +26,7 @@ use Drupal\drupal_practice\PracticeTaskListBuilder;
  *     "form" = {
  *       "add" = "Drupal\drupal_practice\Form\PracticeTaskForm",
  *       "edit" = "Drupal\drupal_practice\Form\PracticeTaskForm",
- *       "delete" = "Drupal\Core\Entity\EntityDeleteForm"
+ *       "delete" = "Drupal\Core\Entity\ContentEntityDeleteForm"
  *     },
  *     "route_provider" = {
  *       "html" = "Drupal\Core\Entity\Routing\AdminHtmlRouteProvider"
