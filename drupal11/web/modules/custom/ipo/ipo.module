@@ -1,5 +1,6 @@
 <?php
 
+use Drupal\ipo\Event\UserLoginEvent;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Render\Markup;
 use Drupal\node\NodeInterface;
@@ -65,3 +66,14 @@ function ipo_help($route_name, $route_match) {
   return NULL;
 }
 
+/**
+ * Implements hook_user_login().
+ */
+function ipo_user_login($account): void {
+  $event = new UserLoginEvent($account);
+
+  \Drupal::service('event_dispatcher')->dispatch(
+    $event,
+    UserLoginEvent::EVENT_NAME
+  );
+}
