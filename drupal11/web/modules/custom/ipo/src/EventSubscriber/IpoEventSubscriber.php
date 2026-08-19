@@ -2,18 +2,28 @@
 
 namespace Drupal\ipo\EventSubscriber;
 
-use Drupal\Core\Routing\RouteBuildEvent;
-use Drupal\Core\Routing\RoutingEvents;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use Symfony\Component\HttpKernel\Event\RequestEvent;
+use Symfony\Component\HttpKernel\KernelEvents;
 
-final class IpoEventSubscriber implements EventSubscriberInterface {
+class IpoEventSubscriber implements EventSubscriberInterface {
+
+  /**
+   * React when a request is received.
+   */
+  public function onRequest(RequestEvent $event): void {
+    // \Drupal::messenger()->addStatus(
+    //   'Hello from IPO event subscriber!'
+    // );
+  }
+
+  /**
+   * {@inheritdoc}
+   */
   public static function getSubscribedEvents(): array {
     return [
-      RoutingEvents::ALTER => 'onRouteAlter',
+      KernelEvents::REQUEST => 'onRequest',
     ];
   }
 
-  public function onRouteAlter(RouteBuildEvent $event): void {
-    // Practice point: route alteration happens during route rebuilding.
-  }
 }

@@ -14,3 +14,10 @@ services:
   ipo.access_checker:
     class: Drupal\ipo\Access\IpoAccessCheck
     arguments: ['@current_user']
+
+  ipo.exchange_manager:
+    class: Drupal\ipo\IpoExchangeManager
+    arguments:
+      - '@container.namespaces'
+      - '@cache.discovery'
+      - '@module_handler'
