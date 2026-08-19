@@ -61,3 +61,27 @@ ipo.cookie_operations:
     _title: 'IPO Cookie Operations'
   requirements:
     _permission: 'access content'
+
+ipo.state:
+  path: '/ipo/state'
+  defaults:
+    _controller: '\Drupal\ipo\Controller\IpoStateController::state'
+    _title: 'IPO State API'
+  requirements:
+    _permission: 'access content'
+
+ipo.state_update:
+  path: '/ipo/state/update'
+  defaults:
+    _controller: '\Drupal\ipo\Controller\IpoStateController::updateState'
+    _title: 'Update IPO State'
+  requirements:
+    _permission: 'access content'
+
+ipo.state_delete:
+  path: '/ipo/state/delete'
+  defaults:
+    _controller: '\Drupal\ipo\Controller\IpoStateController::deleteState'
+    _title: 'Delete IPO State'
+  requirements:
+    _permission: 'access content'
