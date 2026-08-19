@@ -1,0 +1,36 @@
+<style>
+.paisa-card {
+  padding: 24px;
+  margin-bottom: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.paisa-card__title {
+  margin-top: 0;
+}
+
+.paisa-card__link {
+  display: inline-block;
+  margin-top: 15px;
+}
+</style>
+
+<article class="paisa-card">
+
+  <h2 class="paisa-card__title">
+    {{ title }}
+  </h2>
+
+  <div class="paisa-card__body">
+    {{ body }}
+  </div>
+
+  {% if url %}
+    <a href="{{ url }}" class="paisa-card__link">
+      Read more
+    </a>
+  {% endif %}
+
+</article>

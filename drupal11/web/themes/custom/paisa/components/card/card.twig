@@ -1,0 +1,17 @@
+<article class="card">
+
+  <h2 class="card__title">
+    {{ title }}
+  </h2>
+
+  <div class="card__body">
+    {{ body }}
+  </div>
+
+  {% if url %}
+    <a href="{{ url }}" class="card__link">
+      Read more
+    </a>
+  {% endif %}
+
+</article>

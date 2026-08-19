@@ -1,0 +1,67 @@
+<main{{ attributes.addClass(paisa_class) }}>
+
+  <h1>{{ site_title }}</h1>
+
+  {{ page.content }}
+
+</main>
+
+{% if paisa_message %}
+  <div class="paisa-message">
+    {{ paisa_message }}
+  </div>
+{% endif %}
+
+<header class="site-header">
+  <div class="site-header__inner">
+
+    {% if page.header %}
+      {{ page.header }}
+    {% endif %}
+
+  </div>
+</header>
+
+{% if page.primary_menu %}
+  <nav class="main-navigation">
+    {{ page.primary_menu }}
+  </nav>
+{% endif %}
+
+{% if page.highlighted %}
+  <div class="highlighted">
+    {{ page.highlighted }}
+  </div>
+{% endif %}
+
+{% if page.breadcrumb %}
+  <div class="breadcrumb">
+    {{ page.breadcrumb }}
+  </div>
+{% endif %}
+
+<main class="main-wrapper">
+
+  <div class="content-wrapper">
+
+    {% if page.content %}
+      {{ page.content }}
+    {% endif %}
+
+  </div>
+
+  {% if page.sidebar_first %}
+    <aside class="sidebar">
+      {{ page.sidebar_first }}
+    </aside>
+  {% endif %}
+
+</main>
+
+<footer class="site-footer">
+
+  {% if page.footer %}
+    {{ page.footer }}
+  {% endif %}
+
+</footer>

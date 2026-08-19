@@ -1,0 +1,15 @@
+<article{{ article_class }}>
+
+  <h1>{{ label }}</h1>
+
+  {% if content.field_image %}
+    <div class="article__image">
+      {{ content.field_image }}
+    </div>
+  {% endif %}
+
+  <div class="article__body">
+    {{ content.body }}
+  </div>
+
+</article>

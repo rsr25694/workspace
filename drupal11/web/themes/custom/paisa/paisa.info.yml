@@ -1,0 +1,7 @@
+name: Paisa
+type: theme
+base theme: false
+core_version_requirement: ^11
+
+libraries:
+  - paisa/global

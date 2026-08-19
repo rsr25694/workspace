@@ -1,0 +1,70 @@
+<?php
+
+function paisa_theme($existing, $type, $theme, $path): array {
+  return [
+    'paisa_card' => [
+      'variables' => [
+        'title' => NULL,
+        'body' => NULL,
+        'url' => NULL,
+      ],
+      'template' => 'paisa-card',
+      'path' => $path . '/templates',
+    ],
+  ];
+}
+
+function paisa_preprocess_node(array &$variables): void {
+  $variables['paisa_class'] = 'node--paisa';
+
+  $node = $variables['node'];
+
+  $variables['paisa_nid'] = $node->id();
+  $variables['paisa_type'] = $node->bundle();
+
+  if ($node->hasField('field_image') && !$node->get('field_image')->isEmpty()) {
+    $variables['has_paisa_image'] = TRUE;
+  }
+}
+
+function paisa_preprocess_page(array &$variables): void {
+  $variables['paisa_message'] = 'Welcome to Paisa!';
+
+  $variables['site_title'] = \Drupal::config('system.site')->get('name');
+
+  $variables['paisa_class'] = [
+    'paisa-page',
+  ];
+}
+
+function paisa_preprocess_node__article(array &$variables): void {
+  $variables['article_class'] = 'paisa-article-rahul';
+}
+
+function paisa_preprocess_field(array &$variables): void {
+  $variables['paisa_field_name'] = $variables['element']['#field_name'] ?? '';
+}
+
+function paisa_preprocess_field__node__field_image(array &$variables): void {
+  $variables['image_class'] = 'paisa-image';
+}
+
+function paisa_preprocess_block(array &$variables): void {
+  $variables['paisa_block_id'] = $variables['elements']['#id'] ?? '';
+} 
+
+function paisa_preprocess_menu(array &$variables): void {
+  $variables['paisa_menu_class'] = 'paisa-menu';
+}
+
+function paisa_theme_suggestions_node_alter(
+  array &$suggestions,
+  array $variables
+): void {
+  $node = $variables['elements']['#node'];
+
+  if ($node->bundle() === 'article') {
+    $suggestions[] = 'node__article_paisa';
+  }
+}
+

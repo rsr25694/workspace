@@ -1,0 +1,19 @@
+<article class="node node--{{ paisa_type }}">
+
+  <h1>{{ label }}</h1>
+
+  <div class="node__id">
+    Node ID: {{ paisa_nid }}
+  </div>
+
+  {% if has_paisa_image %}
+    <div class="node__image">
+      {{ content.field_image }}
+    </div>
+  {% endif %}
+
+  <div class="node__content">
+    {{ content }}
+  </div>
+
+</article>

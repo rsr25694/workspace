@@ -85,3 +85,12 @@ ipo.state_delete:
     _title: 'Delete IPO State'
   requirements:
     _permission: 'access content'
+
+ipo.sdc:
+  path: '/sdc-test'
+  defaults:
+    _controller: '\Drupal\ipo\Controller\SdcTestController::test'
+    _title: 'Paisa SDC Test'
+  requirements:
+    _permission: 'access content'
+
