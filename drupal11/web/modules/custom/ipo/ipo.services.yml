@@ -1,0 +1,16 @@
+services:
+  ipo.calculator:
+    class: Drupal\ipo\Service\IpoCalculator
+
+  ipo.queue_manager:
+    class: Drupal\ipo\Service\IpoQueueManager
+    arguments: ['@queue']
+
+  ipo.event_subscriber:
+    class: Drupal\ipo\EventSubscriber\IpoEventSubscriber
+    tags:
+      - { name: event_subscriber }
+
+  ipo.access_checker:
+    class: Drupal\ipo\Access\IpoAccessCheck
+    arguments: ['@current_user']

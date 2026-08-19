@@ -1,0 +1,47 @@
+ipo.dashboard:
+  path: '/ipo'
+  defaults:
+    _controller: '\Drupal\ipo\Controller\IpoController::dashboard'
+    _title: 'IPO Practice Dashboard'
+  requirements:
+    _permission: 'access ipo dashboard'
+
+ipo.secure:
+  path: '/ipo/secure'
+  defaults:
+    _controller: '\Drupal\ipo\Controller\IpoController::secure'
+    _title: 'Secure IPO page'
+  requirements:
+    _custom_access: '\Drupal\ipo\Access\IpoAccessCheck::access'
+
+ipo.form:
+  path: '/ipo/form'
+  defaults:
+    _form: '\Drupal\ipo\Form\IpoForm'
+    _title: 'IPO Form'
+  requirements:
+    _permission: 'administer ipo settings'
+
+ipo.ajax:
+  path: '/ipo/ajax'
+  defaults:
+    _form: '\Drupal\ipo\Form\IpoAjaxForm'
+    _title: 'IPO AJAX Form'
+  requirements:
+    _permission: 'administer ipo settings'
+
+ipo.batch:
+  path: '/ipo/batch'
+  defaults:
+    _controller: '\Drupal\ipo\Controller\IpoBatchController::run'
+    _title: 'IPO Batch'
+  requirements:
+    _permission: 'administer ipo settings'
+
+ipo.IpoFormForQueueExample:
+  path: '/ipo/apply'
+  defaults:
+    _form: '\Drupal\ipo\Form\IpoFormForQueueExample'
+    _title: 'IPO Form for Queue Example'
+  requirements:
+    _permission: 'access content'

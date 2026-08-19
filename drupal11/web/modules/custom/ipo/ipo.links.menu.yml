@@ -1,0 +1,10 @@
+ipo.dashboard:
+  title: 'IPO Practice'
+  description: 'Drupal 11 practice dashboard.'
+  route_name: ipo.dashboard
+  parent: system.admin_content
+
+ipo.form:
+  title: 'IPO Settings'
+  route_name: ipo.form
+  parent: system.admin_config_system

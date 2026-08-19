@@ -1,0 +1,11 @@
+name: IPO Practice
+type: module
+description: 'Drupal 11 practice module covering advanced custom module APIs.'
+package: Custom
+core_version_requirement: ^11
+dependencies:
+  - drupal:node
+  - drupal:user
+  - drupal:views
+  - drupal:migrate
+  - drupal:jsonapi

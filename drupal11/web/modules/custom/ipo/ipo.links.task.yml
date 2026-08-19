@@ -1,0 +1,4 @@
+ipo.dashboard_tab:
+  route_name: ipo.dashboard
+  title: 'Dashboard'
+  base_route: ipo.dashboard

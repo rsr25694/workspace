@@ -1,0 +1,8 @@
+access ipo dashboard:
+  title: 'Access IPO dashboard'
+  description: 'View the IPO practice dashboard.'
+
+administer ipo settings:
+  title: 'Administer IPO settings'
+  description: 'Use IPO practice administration and demonstrations.'
+  restrict access: true

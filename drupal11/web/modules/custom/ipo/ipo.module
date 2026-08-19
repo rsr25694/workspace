@@ -1,0 +1,67 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Markup;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function ipo_theme($existing, $type, $theme, $path) {
+  return [
+    'ipo_dashboard' => [
+      'variables' => [
+        'title' => NULL,
+        'items' => [],
+      ],
+      'template' => 'ipo-dashboard',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function ipo_preprocess_node(array &$variables) {
+  if (!empty($variables['node']) && $variables['node'] instanceof NodeInterface) {
+    $variables['ipo_practice_label'] = t('IPO practice');
+  }
+}
+
+/**
+ * Implements hook_cron().
+ */
+function ipo_cron() {
+  \Drupal::service('ipo.queue_manager')->createCronItem();
+}
+
+/**
+ * Implements hook_views_data().
+ */
+function ipo_views_data() {
+  $data['ipo']['table']['group'] = 'IPO Practice';
+  $data['ipo']['table']['base'] = [
+    'field' => 'id',
+    'title' => t('IPO Practice items'),
+    'help' => t('Demonstration pseudo-table for Views integration.'),
+  ];
+  $data['ipo']['id'] = [
+    'title' => t('ID'),
+    'help' => t('Demo identifier.'),
+    'field' => ['id' => 'numeric'],
+    'sort' => ['id' => 'standard'],
+    'filter' => ['id' => 'numeric'],
+  ];
+  return $data;
+}
+
+/**
+ * Implements hook_help().
+ */
+function ipo_help($route_name, $route_match) {
+  if ($route_name === 'help.page.ipo') {
+    return Markup::create('<p>' . t('IPO is a Drupal 11 practice module for APIs and architecture patterns.') . '</p>');
+  }
+  return NULL;
+}
+

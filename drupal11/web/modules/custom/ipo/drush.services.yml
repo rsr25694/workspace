@@ -1,0 +1,5 @@
+services:
+  ipo.drush_commands:
+    class: Drupal\ipo\Commands\IpoCommands
+    tags:
+      - { name: drush.command }
