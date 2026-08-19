@@ -17,11 +17,11 @@ use Drupal\Core\Cache\Cache;
 final class IpoPracticeBlock extends BlockBase {
   public function build(): array {
     return [
-      '#markup' => $this->t('IPO plugin block: @time', ['@time' => date('c')]),
+      '#markup' => $this->t('IPO plugin block: @time', ['@time' => rand(1, 100)]),
       '#cache' => [
         'contexts' => ['user.roles'],
         'tags' => ['ipo:block'],
-        'max-age' => 60,
+        'max-age' => 5,
       ],
     ];
   }
