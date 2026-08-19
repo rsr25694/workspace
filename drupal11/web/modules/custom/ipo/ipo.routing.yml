@@ -45,3 +45,19 @@ ipo.IpoFormForQueueExample:
     _title: 'IPO Form for Queue Example'
   requirements:
     _permission: 'access content'
+
+ipo.session_operations:
+  path: '/ipo/session'
+  defaults:
+    _controller: '\Drupal\ipo\Controller\IpoSessionController::sessionOperations'
+    _title: 'IPO Session Operations'
+  requirements:
+    _permission: 'access content'
+
+ipo.cookie_operations:
+  path: '/ipo/cookie'
+  defaults:
+    _controller: '\Drupal\ipo\Controller\IpoCookieController::cookieOperations'
+    _title: 'IPO Cookie Operations'
+  requirements:
+    _permission: 'access content'
