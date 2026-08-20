@@ -28,7 +28,7 @@ function paisa_preprocess_node(array &$variables): void {
 }
 
 function paisa_preprocess_page(array &$variables): void {
-  $variables['paisa_message'] = 'Welcome to Paisa!';
+  // $variables['paisa_message'] = 'Welcome to Paisa!';
 
   $variables['site_title'] = \Drupal::config('system.site')->get('name');
 
