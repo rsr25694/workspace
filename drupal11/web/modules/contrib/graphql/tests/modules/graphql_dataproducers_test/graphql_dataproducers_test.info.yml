@@ -1,0 +1,12 @@
+type: module
+name: GraphQL Data Producers Test
+description: Test module for GraphQL data producer plugins used in kernel tests.
+package: Testing
+hidden: TRUE
+dependencies:
+  - graphql:graphql
+
+# Information added by Drupal.org packaging script on 2026-06-07
+version: '5.0.0'
+project: 'graphql'
+datestamp: 1780822206
